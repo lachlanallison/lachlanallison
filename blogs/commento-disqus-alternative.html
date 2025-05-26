@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commento - a Disqus Alternative - Lachlan Allison</title>
+    <meta name="description" content="Setting up Commento as a privacy-friendly, lightweight alternative to Disqus for blog comments">
+    <meta name="author" content="Lachlan Allison">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lachlanallison.com/blogs/commento-disqus-alternative.html">
+    <meta property="og:title" content="Commento - a Disqus Alternative">
+    <meta property="og:description" content="Setting up Commento as a privacy-friendly, lightweight alternative to Disqus for blog comments">
+    <meta property="og:image" content="https://lachlanallison.com/assets/images/og-commento.jpg">
+    <meta property="article:published_time" content="2020-01-19">
+    <meta property="article:author" content="Lachlan Allison">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lachlanallison.com/blogs/commento-disqus-alternative.html">
+    <meta property="twitter:title" content="Commento - a Disqus Alternative">
+    <meta property="twitter:description" content="Setting up Commento as a privacy-friendly, lightweight alternative to Disqus for blog comments">
+    <meta property="twitter:image" content="https://lachlanallison.com/assets/images/og-commento.jpg">
+    
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="logo">Lachlan Allison</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blogs/index.html">Blogs</a></li>
+                <li><a href="../projects/index.html">Projects</a></li>
+                <li><a href="../now/index.html">Now</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <article class="blog-post">
+            <a href="index.html" class="back-link">← Back to Blog</a>
+            
+            <header class="blog-header text-center">
+                <h1>Commento - a Disqus Alternative</h1>
+                <div class="blog-meta">
+                    <p>Posted on January 19, 2020 by Lachlan Allison • 8 min read</p>
+                </div>
+            </header>
+
+            <div class="blog-content">
+                <p>I recently migrated my site from WordPress to Ghost to try it out, perhaps I will give my opinions of Ghost in another post. I wanted to have comments on this blog however unlike WordPress, Ghost doesn't have native commenting. Therefore I needed a third party option. I first considered Disqus but I read a few bad things about their practices so they were out of the picture. Enter Commento.</p>
+
+                <p>Commento is an open source, lightweight, privacy friendly commenting solution. Commento looked like it fit the bill for my purposes so I thought I would try it out. They offer a hosted solution for a monthly cost as well as an option to self-host. Recently I have been self hosting a lot more things so I thought I would try hosting Commento as well. I set up Commento behind a Nginx proxy with a local Postgres database on a Ubuntu 19.10 server.</p>
+
+                <h2>Deploying Commento</h2>
+
+                <p>The documentation for Commento is quite good however its missing a steps that I needed to do for my setup. So I will share what I had to do below. There is a couple of options for deployment, you can download the release binaries, use a docker image or compile the source yourself. I tried to deploy the docker image and connect it to a local Postgres database but I was having too many issues so I just ending up deploying the release binaries and setting up a service which turned out to be quite easy.</p>
+
+                <p>First I had to create a new database for Commento on my Postgres instance. I also added a user for commento to use to access the database. Code below.</p>
+
+                <pre><code>sudo -u postgres psql
+CREATE DATABASE commento;
+CREATE USER commento WITH PASSWORD 'commento';
+quit</code></pre>
+
+                <p>After that I downloaded the release binaries and extracted them to the location where they would run from, eg. <code>/usr/bin/commento</code>. Commento gets all its configuration from environment variables. So I then had to set up a service for Commento to keep it running and have the correct environment variables set. I have provided an example systemd unit file below for Ubuntu, you will need to change the variables according to your environment. This file needs to be created and saved in <code>/etc/systemd/system</code> with the name <code>commento.service</code>.</p>
+
+                <pre><code>[Unit]
+Description=Commento daemon service
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/commento
+Environment=COMMENTO_ORIGIN=https://commento.example.com
+Environment=COMMENTO_PORT=8080
+Environment=COMMENTO_POSTGRES=postgres://commento:commento@localhost:5432/commento?sslmode=disable
+Environment=COMMENTO_SMTP_HOST=smtp.example.com
+Environment=COMMENTO_SMTP_PORT=587
+Environment=COMMENTO_SMTP_USERNAME=commento@example.com
+Environment=COMMENTO_SMTP_PASSWORD=commento
+Environment=COMMENTO_SMTP_FROM_ADDRESS=commento@example.com
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+
+                <p>Once that file has been create you can use <code>sudo service commento start</code> to start the service and check it is running with <code>sudo service commento status</code>. Once you have confirmed it is all working we can then begin to set up the nginx proxy configuration.</p>
+
+                <h2>Nginx Configuration</h2>
+
+                <p>First I set up a subdomain at my domain registrar. Then I got a SSL certificate for my Commento subdomain from LetsEncrypt. After that, I used the below configuration to proxy requests coming into Nginx to the local Commento service. You will obviously need to change the domain names as well as SSL certificate locations as well as listen directives as need be. You may also need to change the port you are running the Commento service on if you changed it in the service file.</p>
+
+                <pre><code># Redirect http to https
+server {
+    listen 80;
+    listen [::]:80;
+    server_name commento.example.com;
+
+    return 301 https://commento.example.com$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name commento.example.com;
+
+    location / {
+        proxy_set_header HOST $http_host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        proxy_pass http://127.0.0.1:8080;
+        proxy_redirect off;
+    }
+
+    ssl_certificate /etc/letsencrypt/live/commento.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/commento.example.com/privkey.pem;
+}</code></pre>
+
+                <p>Once the Nginx configuration is deployed you should be able to access the admin page using the sub/domain you have set up. Then you can proceed with the configuration of Commento and add it to your site.</p>
+
+                <h2>Final Thoughts</h2>
+
+                <p>I have just added it to my Ghost footer injection which kinda places it in a weird place due to Ghost's templating. However, it looks good enough for now. But maybe in the future I will play with it some more to get it looking nicer.</p>
+
+                <p>Commento has proven to be an excellent alternative to Disqus. It's lightweight, respects user privacy, and gives you full control over your data. The self-hosting option means you're not dependent on a third-party service, and the open-source nature ensures transparency and community-driven development.</p>
+
+                <p>While the setup requires some technical knowledge, it's well worth the effort for anyone who values privacy and wants a clean, fast commenting system without tracking or ads.</p>
+
+                <hr>
+
+                <div class="blog-footer text-center mt-2">
+                    <p>Thanks for reading, please leave a comment to try out Commento below. Or if you have any questions about the above steps please also leave a comment and I will try help you out.</p>
+                    <div class="cta-buttons">
+                        <a href="../contact/index.html" class="btn btn-primary">Get in Touch</a>
+                        <a href="index.html" class="btn btn-secondary">Read More Articles</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="mailto:hello@lachlanallison.com">Email</a>
+            <a href="https://github.com/lachlanallison" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/lachlanallison" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com/lachlanallison" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>&copy; 2025 Lachlan Allison. All rights reserved.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html> 
