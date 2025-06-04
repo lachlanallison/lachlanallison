@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-    <header class="header">
+    <div data-include="header">
+        <!-- Fallback content if JavaScript fails --><header class="header">
         <nav class="nav">
             <a href="../index.html" class="logo">Lachlan Allison</a>
             <ul class="nav-links">
@@ -38,6 +39,7 @@
             </ul>
         </nav>
     </header>
+    </div>
 
     <main class="main-content">
         <article class="blog-post">
@@ -142,7 +144,8 @@ server {
         </article>
     </main>
 
-    <footer class="footer">
+    <div data-include="footer">
+        <!-- Fallback content if JavaScript fails --><footer class="footer">
         <div class="footer-links">
             <a href="mailto:hello@lachlanallison.com">Email</a>
             <a href="https://github.com/lachlanallison" target="_blank" rel="noopener">GitHub</a>
@@ -151,7 +154,9 @@ server {
         </div>
         <p>&copy; 2025 Lachlan Allison. All rights reserved.</p>
     </footer>
+    </div>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/includes.js"></script>
 </body>
 </html> 

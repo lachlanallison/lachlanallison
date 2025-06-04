@@ -22,9 +22,50 @@
     <meta property="twitter:image" content="https://lachlanallison.com/assets/images/og-photos.jpg">
     
     <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+        
+        .photo-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
+    <div data-include="header">
+        <!-- Fallback content if JavaScript fails --><header class="header">
         <nav class="nav">
             <a href="../index.html" class="logo">Lachlan Allison</a>
             <ul class="nav-links">
@@ -37,6 +78,7 @@
             </ul>
         </nav>
     </header>
+    </div>
 
     <main class="main-content">
         <section class="hero text-center">
@@ -44,35 +86,101 @@
             <p>Capturing moments, stories, and beauty through my lens</p>
         </section>
 
-        <section class="photo-categories mb-2">
-            <div class="grid grid-3">
-                <div class="card text-center">
-                    <h3>📸 Street Photography</h3>
-                    <p>Urban life and human stories captured in candid moments</p>
+        <section class="photo-gallery">
+            <div class="gallery-grid">
+                <div class="photo-item">
+                    <img src="DSC00177.JPG" alt="Photography by Lachlan Allison" loading="lazy">
                 </div>
-                <div class="card text-center">
-                    <h3>🌄 Landscapes</h3>
-                    <p>Natural beauty and dramatic vistas from around the world</p>
+                <div class="photo-item">
+                    <img src="DSC00190.JPG" alt="Photography by Lachlan Allison" loading="lazy">
                 </div>
-                <div class="card text-center">
-                    <h3>🏙️ Architecture</h3>
-                    <p>Modern and historical buildings showcasing design and structure</p>
+                <div class="photo-item">
+                    <img src="DSC00223.JPG" alt="Photography by Lachlan Allison" loading="lazy">
                 </div>
-            </div>
-        </section>
-
-        <section class="text-center mb-2">
-            <div class="card" style="max-width: 600px; margin: 0 auto;">
-                <h2>Gallery Coming Soon</h2>
-                <p>I'm currently curating my best work to share here. Check back soon for a collection of my photography from around the world.</p>
-                <div class="cta-buttons">
-                    <a href="../contact/index.html" class="btn btn-primary">Commission a Shoot</a>
+                <div class="photo-item">
+                    <img src="DSC00229.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00238.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00256.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00263.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00403.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00413.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00416.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00802.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00811.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00955.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00972.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC00978.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01059.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01065.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01069.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01077.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01080.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01123.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01133.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01284.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01296.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01314.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01430.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01431.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01524.JPG" alt="Photography by Lachlan Allison" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="DSC01551.JPG" alt="Photography by Lachlan Allison" loading="lazy">
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <div data-include="footer">
+        <!-- Fallback content if JavaScript fails --><footer class="footer">
         <div class="footer-links">
             <a href="mailto:hello@lachlanallison.com">Email</a>
             <a href="https://github.com/lachlanallison" target="_blank" rel="noopener">GitHub</a>
@@ -81,7 +189,9 @@
         </div>
         <p>&copy; 2025 Lachlan Allison. All rights reserved.</p>
     </footer>
+    </div>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/includes.js"></script>
 </body>
 </html> 

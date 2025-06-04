@@ -24,18 +24,20 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="../index.html" class="logo">Lachlan Allison</a>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../blogs/index.html">Blogs</a></li>
-                <li><a href="../projects/index.html">Projects</a></li>
-                <li><a href="../now/index.html">Now</a></li>
-                <li><a href="../contact/index.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div data-include="header">
+        <!-- Fallback content if JavaScript fails --><header class="header">
+            <nav class="nav">
+                <a href="../index.html" class="logo">Lachlan Allison</a>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../blogs/index.html">Blogs</a></li>
+                    <li><a href="../projects/index.html">Projects</a></li>
+                    <li><a href="../now/index.html">Now</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
     <main class="main-content">
         <section class="hero text-center">
@@ -81,16 +83,19 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="mailto:hello@lachlanallison.com">Email</a>
-            <a href="https://github.com/lachlanallison" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://linkedin.com/in/lachlanallison" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://twitter.com/lachlanallison" target="_blank" rel="noopener">Twitter</a>
-        </div>
-        <p>&copy; 2025 Lachlan Allison. All rights reserved.</p>
-    </footer>
+    <div data-include="footer">
+        <!-- Fallback content if JavaScript fails --><footer class="footer">
+            <div class="footer-links">
+                <a href="mailto:hello@lachlanallison.com">Email</a>
+                <a href="https://github.com/lachlanallison" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/lachlanallison" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://twitter.com/lachlanallison" target="_blank" rel="noopener">Twitter</a>
+            </div>
+            <p>&copy; 2025 Lachlan Allison. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/includes.js"></script>
 </body>
 </html> 
