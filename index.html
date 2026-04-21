@@ -6,22 +6,25 @@
     <title>Lachlan Allison - Developer</title>
     <meta name="description" content="Lachlan Allison - Developer building web applications and digital solutions">
     <meta name="author" content="Lachlan Allison">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lachlanallison.com/">
     <meta property="og:title" content="Lachlan Allison - Developer">
     <meta property="og:description" content="Lachlan Allison - Developer building web applications and digital solutions">
     <meta property="og:image" content="https://lachlanallison.com/assets/images/og-home.jpg">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://lachlanallison.com/">
     <meta property="twitter:title" content="Lachlan Allison - Developer">
     <meta property="twitter:description" content="Lachlan Allison - Developer building web applications and digital solutions">
     <meta property="twitter:image" content="https://lachlanallison.com/assets/images/og-home.jpg">
-    
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <div data-include="header">
@@ -31,9 +34,9 @@
                 <a href="index.html" class="logo">Lachlan Allison</a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="projects/index.html">Projects</a></li>
                     <li><a href="blogs/index.html">Blogs</a></li>
                     <li><a href="photos/index.html">Photos</a></li>
-                    <li><a href="projects/index.html">Projects</a></li>
                     <li><a href="now/index.html">Now</a></li>
                     <li><a href="contact/index.html">Contact</a></li>
                 </ul>
@@ -43,63 +46,65 @@
 
     <main class="main-content">
         <section class="hero">
+            <span class="availability-banner">Available for new projects</span>
             <h1>Hi, I'm Lachlan</h1>
             <p>I like to solve problems with data and software. Always happy to talk about working on projects together.</p>
-            
+
             <div class="cta-buttons">
-                <a href="projects/index.html" class="btn btn-primary">View Projects</a>
-                <a href="contact/index.html" class="btn btn-secondary">Contact</a>
+                <a href="projects/index.html" class="btn btn-primary">View projects</a>
+                <a href="contact/index.html" class="btn btn-secondary">Get in touch</a>
             </div>
         </section>
 
         <section class="introduction">
+            <div class="section-header">
+                <h2>Explore</h2>
+                <span class="section-meta">01 / intro</span>
+            </div>
             <div class="grid grid-3">
-                <div class="card">
-                    <h3>💻 Projects</h3>
+                <a href="projects/index.html" class="card" style="text-decoration: none;">
+                    <h3>Projects</h3>
                     <p class="card-description">Browser extensions, web tools, and applications built to solve real problems.</p>
-                    <a href="projects/index.html">View all projects →</a>
-                </div>
-                
-                <div class="card">
-                    <h3>✍️ Writing</h3>
+                    <span class="card-meta" style="margin-top: auto; margin-bottom: 0; color: var(--accent); text-transform: none; font-family: var(--font-sans); letter-spacing: 0;">View all projects →</span>
+                </a>
+
+                <a href="blogs/index.html" class="card" style="text-decoration: none;">
+                    <h3>Writing</h3>
                     <p class="card-description">Technical tutorials and thoughts on development, tools, and productivity.</p>
-                    <a href="blogs/index.html">Read posts →</a>
-                </div>
-                
-                <div class="card">
-                    <h3>🚀 Now</h3>
-                    <p class="card-description">What I'm currently working on and learning.</p>
-                    <a href="now/index.html">See what's happening →</a>
-                </div>
+                    <span class="card-meta" style="margin-top: auto; margin-bottom: 0; color: var(--accent); text-transform: none; font-family: var(--font-sans); letter-spacing: 0;">Read posts →</span>
+                </a>
+
+                <a href="now/index.html" class="card" style="text-decoration: none;">
+                    <h3>Now</h3>
+                    <p class="card-description">What I'm currently working on and learning at the moment.</p>
+                    <span class="card-meta" style="margin-top: auto; margin-bottom: 0; color: var(--accent); text-transform: none; font-family: var(--font-sans); letter-spacing: 0;">See what's happening →</span>
+                </a>
             </div>
         </section>
 
         <section class="recent-highlights">
-            <div class="text-center" style="margin-bottom: 2rem;">
-                <h2>Recent Highlights</h2>
-                <p>A few things I've been working on lately</p>
+            <div class="section-header">
+                <h2>Recent highlights</h2>
+                <span class="section-meta">02 / latest</span>
             </div>
-            
+
             <div class="grid grid-3">
                 <div class="card">
-                    <h4>Latest Blog Post</h4>
-                    <p>Commento - a Disqus Alternative</p>
-                    <small>Setting up privacy-friendly blog comments</small>
-                    <br><a href="blogs/commento-disqus-alternative.html">Read more →</a>
+                    <h4>Latest blog post</h4>
+                    <p class="card-description">Commento — a Disqus alternative. Setting up privacy-friendly blog comments.</p>
+                    <a href="blogs/commento-disqus-alternative.html" style="margin-top: auto;">Read more →</a>
                 </div>
-                
+
                 <div class="card">
                     <h4>Photography</h4>
-                    <p>New photos from recent travels</p>
-                    <small>Street photography and landscapes</small>
-                    <br><a href="photos/index.html">View gallery →</a>
+                    <p class="card-description">New photos from recent travels — street photography and landscapes.</p>
+                    <a href="photos/index.html" style="margin-top: auto;">View gallery →</a>
                 </div>
-                
+
                 <div class="card">
-                    <h4>Current Projects</h4>
-                    <p>Browser tools and web applications</p>
-                    <small>Solving everyday problems with code</small>
-                    <br><a href="projects/index.html">See projects →</a>
+                    <h4>Current projects</h4>
+                    <p class="card-description">Browser tools and web applications solving everyday problems with code.</p>
+                    <a href="projects/index.html" style="margin-top: auto;">See projects →</a>
                 </div>
             </div>
         </section>
@@ -121,4 +126,4 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/includes.js"></script>
 </body>
-</html> 
+</html>

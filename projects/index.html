@@ -6,22 +6,25 @@
     <title>Projects - Lachlan Allison</title>
     <meta name="description" content="Portfolio of web applications, mobile apps, and digital projects by Lachlan Allison">
     <meta name="author" content="Lachlan Allison">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lachlanallison.com/projects/">
     <meta property="og:title" content="Projects - Lachlan Allison">
     <meta property="og:description" content="Portfolio of web applications, mobile apps, and digital projects by Lachlan Allison">
     <meta property="og:image" content="https://lachlanallison.com/assets/images/og-projects.jpg">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://lachlanallison.com/projects/">
     <meta property="twitter:title" content="Projects - Lachlan Allison">
     <meta property="twitter:description" content="Portfolio of web applications, mobile apps, and digital projects by Lachlan Allison">
     <meta property="twitter:image" content="https://lachlanallison.com/assets/images/og-projects.jpg">
-    
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <div data-include="header">
@@ -30,8 +33,9 @@
             <a href="../index.html" class="logo">Lachlan Allison</a>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../blogs/index.html">Blogs</a></li>
                 <li><a href="../projects/index.html">Projects</a></li>
+                <li><a href="../blogs/index.html">Blogs</a></li>
+                <li><a href="../photos/index.html">Photos</a></li>
                 <li><a href="../now/index.html">Now</a></li>
                 <li><a href="../contact/index.html">Contact</a></li>
             </ul>
@@ -42,138 +46,186 @@
     <main class="main-content">
         <section class="hero text-center">
             <h1>Projects</h1>
-            <p>A collection of web applications, mobile apps, and digital solutions I've built</p>
+            <p>A collection of web applications, browser tools, and small utilities I've built over the years.</p>
         </section>
 
         <section class="all-projects">
-            <h2>All Projects</h2>
-            <div class="grid grid-3">
-                <article class="card">
-                    <h3>Chrome Session Viewer</h3>
-                    <div class="card-meta">Web Application • June 5, 2025</div>
-                    <p class="card-description">A modern web application that processes Google Chrome session files client-side to extract and display all tabs that are/were open. Features a beautiful interface with drag & drop, export options, and completely private processing - no data leaves your browser.</p>
-                    <div class="card-tags">
+            <div class="section-header">
+                <h2>All projects</h2>
+                <span class="section-meta">10 shipped</span>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Web App</span>
+                        <span class="project-card__date">Apr 2026</span>
+                    </div>
+                    <h3 class="project-card__title">Map a Route</h3>
+                    <p class="project-card__description">A route planning web app for mapping and visualizing custom paths. Built as a practical utility for quickly creating and sharing route ideas.</p>
+                    <div class="project-card__tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Maps</span>
+                        <span class="tag">Route Planning</span>
+                    </div>
+                    <div class="project-card__footer">
+                        <a href="https://lachlanallison.github.io/map-a-route/" target="_blank" rel="noopener" class="btn btn-primary">View app</a>
+                        <a href="https://github.com/lachlanallison/map-a-route" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Web App</span>
+                        <span class="project-card__date">Jun 2025</span>
+                    </div>
+                    <h3 class="project-card__title">Chrome Session Viewer</h3>
+                    <p class="project-card__description">A modern web app that processes Google Chrome session files client-side to extract and display all open tabs. Drag &amp; drop, export options, and fully private — no data leaves your browser.</p>
+                    <div class="project-card__tags">
                         <span class="tag">JavaScript</span>
                         <span class="tag">Chrome Sessions</span>
-                        <span class="tag">File Processing</span>
                         <span class="tag">Privacy-First</span>
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://lachlanallison.github.io/chrome-session-viewer/" target="_blank" rel="noopener" class="btn btn-primary">View App</a>
+                    <div class="project-card__footer">
+                        <a href="https://lachlanallison.github.io/chrome-session-viewer/" target="_blank" rel="noopener" class="btn btn-primary">View app</a>
                         <a href="https://github.com/lachlanallison/chrome-session-viewer" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>Browser Extensions Icons</h3>
-                    <div class="card-meta">Web Tool • May 22, 2025</div>
-                    <p class="card-description">A simple and efficient web tool to convert images into icons for browser extensions in the correct sizes. All processing happens directly in your browser - your images never leave your device.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Web Tool</span>
+                        <span class="project-card__date">May 2025</span>
+                    </div>
+                    <h3 class="project-card__title">Browser Extension Icons</h3>
+                    <p class="project-card__description">A simple, efficient web tool to convert images into icons for browser extensions in all the correct sizes. All processing happens in your browser — your images never leave your device.</p>
+                    <div class="project-card__tags">
                         <span class="tag">JavaScript</span>
                         <span class="tag">Canvas API</span>
                         <span class="tag">Browser Extensions</span>
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://lachlanallison.github.io/browserextensionsicons" target="_blank" rel="noopener" class="btn btn-primary">View Tool</a>
+                    <div class="project-card__footer">
+                        <a href="https://lachlanallison.github.io/browserextensionsicons" target="_blank" rel="noopener" class="btn btn-primary">View tool</a>
+                        <a href="https://github.com/lachlanallison/browserextensionsicons" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>NoSpoilerYouTube</h3>
-                    <div class="card-meta">Firefox Extension • February 8, 2025</div>
-                    <p class="card-description">A small extension to hide the total time and progress bar on YouTube videos, mainly to hide spoilers from knowing the length of video and how far in it you are, ideal for watching competitive matches.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Extension</span>
+                        <span class="project-card__date">Feb 2025</span>
+                    </div>
+                    <h3 class="project-card__title">NoSpoilerYouTube</h3>
+                    <p class="project-card__description">A small Firefox extension to hide the total time and progress bar on YouTube videos — ideal for watching competitive matches without knowing how far in you are.</p>
+                    <div class="project-card__tags">
                         <span class="tag">Firefox Extension</span>
                         <span class="tag">JavaScript</span>
                         <span class="tag">YouTube</span>
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://addons.mozilla.org/en-US/firefox/addon/nospoileryoutube/" target="_blank" rel="noopener" class="btn btn-primary">Firefox Add-on</a>
+                    <div class="project-card__footer">
+                        <a href="https://addons.mozilla.org/en-US/firefox/addon/nospoileryoutube/" target="_blank" rel="noopener" class="btn btn-primary">Firefox add-on</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>PhotoStats</h3>
-                    <div class="card-meta">Web Application • November 14, 2024</div>
-                    <p class="card-description">A photo statistics and analysis tool that provides insights into your photography collection. Built to help photographers understand their shooting patterns and improve their craft.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Web App</span>
+                        <span class="project-card__date">Nov 2024</span>
+                    </div>
+                    <h3 class="project-card__title">PhotoStats</h3>
+                    <p class="project-card__description">A photo statistics and analysis tool that provides insights into your photography collection. Built to help photographers understand their shooting patterns and improve their craft.</p>
+                    <div class="project-card__tags">
                         <span class="tag">JavaScript</span>
                         <span class="tag">Photography</span>
                         <span class="tag">Data Analysis</span>
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://lachlanallison.github.io/photostats/" target="_blank" rel="noopener" class="btn btn-primary">View Demo</a>
+                    <div class="project-card__footer">
+                        <a href="https://lachlanallison.github.io/photostats/" target="_blank" rel="noopener" class="btn btn-primary">View demo</a>
+                        <a href="https://github.com/lachlanallison/photostats" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>Remove YouTube Recommended Videos</h3>
-                    <div class="card-meta">Firefox Extension • January 29, 2020</div>
-                    <p class="card-description">A simple Firefox extension developed to stop YouTube recommended videos from taking up people's time. It removes all recommended videos from YouTube pages to stop people from getting sucked into hours of watching videos.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Extension</span>
+                        <span class="project-card__date">Jan 2020</span>
+                    </div>
+                    <h3 class="project-card__title">Remove YouTube Recommended Videos</h3>
+                    <p class="project-card__description">A Firefox extension that removes all recommended videos from YouTube pages, designed to stop you from getting sucked into hours of watching unrelated content.</p>
+                    <div class="project-card__tags">
                         <span class="tag">Firefox Extension</span>
                         <span class="tag">JavaScript</span>
                         <span class="tag">Productivity</span>
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://addons.mozilla.org/en-US/firefox/addon/remove-yt-recommended-videos/" target="_blank" rel="noopener" class="btn btn-primary">Firefox Add-on</a>
+                    <div class="project-card__footer">
+                        <a href="https://addons.mozilla.org/en-US/firefox/addon/remove-yt-recommended-videos/" target="_blank" rel="noopener" class="btn btn-primary">Firefox add-on</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>Comment Out</h3>
-                    <div class="card-meta">WordPress Plugin • December 28, 2019</div>
-                    <p class="card-description">A very simple WordPress plugin to allow users to keep text in posts but not display it on the live page. Uses shortcodes to designate hidden text and provides a page to track all comments across your site.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">WP Plugin</span>
+                        <span class="project-card__date">Dec 2019</span>
+                    </div>
+                    <h3 class="project-card__title">Comment Out</h3>
+                    <p class="project-card__description">A simple WordPress plugin that lets users keep text in posts but hide it from the live page via shortcodes, with a dashboard to track all comments across your site.</p>
+                    <div class="project-card__tags">
                         <span class="tag">WordPress</span>
                         <span class="tag">PHP</span>
-                        <span class="tag">Plugin Development</span>
+                        <span class="tag">Plugin</span>
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://wordpress.org/plugins/comment-out/" target="_blank" rel="noopener" class="btn btn-primary">WordPress Directory</a>
+                    <div class="project-card__footer">
+                        <a href="https://wordpress.org/plugins/comment-out/" target="_blank" rel="noopener" class="btn btn-primary">WordPress directory</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>Image Manipulation for Amazon SiteStripe</h3>
-                    <div class="card-meta">WordPress Plugin • November 1, 2019</div>
-                    <p class="card-description">A WordPress plugin that makes minor manipulations for images sourced from Amazon SiteStripe. It centers images, scales them up, and adds CTA buttons to help improve conversion rates for Amazon Associates.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">WP Plugin</span>
+                        <span class="project-card__date">Nov 2019</span>
+                    </div>
+                    <h3 class="project-card__title">Image Manipulation for Amazon SiteStripe</h3>
+                    <p class="project-card__description">A WordPress plugin that makes minor manipulations to images sourced from Amazon SiteStripe — centering, scaling, and adding CTA buttons to boost conversions for Amazon Associates.</p>
+                    <div class="project-card__tags">
                         <span class="tag">WordPress</span>
                         <span class="tag">PHP</span>
                         <span class="tag">Amazon Associates</span>
                     </div>
-                    <div style="margin-top: 1rem;">
-                        <a href="https://wordpress.org/plugins/manipulation-for-amazon-sitestripe-image/" target="_blank" rel="noopener" class="btn btn-primary">WordPress Directory</a>
+                    <div class="project-card__footer">
+                        <a href="https://wordpress.org/plugins/manipulation-for-amazon-sitestripe-image/" target="_blank" rel="noopener" class="btn btn-primary">WordPress directory</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>WP GDrive Backup</h3>
-                    <div class="card-meta">Backup Script • February 14, 2019</div>
-                    <p class="card-description">A small script to backup WordPress websites and databases to Google Drive. Automates the backup process for WordPress sites with cloud storage integration.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Script</span>
+                        <span class="project-card__date">Feb 2019</span>
+                    </div>
+                    <h3 class="project-card__title">WP GDrive Backup</h3>
+                    <p class="project-card__description">A small script to back up WordPress websites and databases to Google Drive. Automates the backup process with cloud storage integration.</p>
+                    <div class="project-card__tags">
                         <span class="tag">Python</span>
                         <span class="tag">WordPress</span>
                         <span class="tag">Google Drive API</span>
-                        <span class="tag">Backup</span>
                     </div>
-                    <div style="margin-top: 1rem;">
+                    <div class="project-card__footer">
                         <a href="https://github.com/lachlanallison/wp-gdrive-backup" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>Windows Helper Scripts</h3>
-                    <div class="card-meta">Automation Scripts • December 14, 2018</div>
-                    <p class="card-description">An assortment of Windows scripts to automate various tasks and improve productivity. Collection of utilities for Windows system administration and daily tasks.</p>
-                    <div class="card-tags">
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <span class="project-card__category">Script</span>
+                        <span class="project-card__date">Dec 2018</span>
+                    </div>
+                    <h3 class="project-card__title">Windows Helper Scripts</h3>
+                    <p class="project-card__description">An assortment of Windows scripts to automate various tasks and improve productivity. A collection of utilities for Windows system administration and daily workflows.</p>
+                    <div class="project-card__tags">
                         <span class="tag">Windows</span>
                         <span class="tag">PowerShell</span>
                         <span class="tag">Automation</span>
-                        <span class="tag">Scripts</span>
                     </div>
-                    <div style="margin-top: 1rem;">
+                    <div class="project-card__footer">
                         <a href="https://github.com/lachlanallison/windows-helper-scripts" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
                     </div>
                 </article>
@@ -181,12 +233,12 @@
         </section>
 
         <section class="work-together text-center mb-2">
-            <div class="card" style="max-width: 600px; margin: 0 auto;">
-                <h3>Let's Work Together</h3>
-                <p>Interested in collaborating on a project or have an idea you'd like to discuss? I'm always excited to work on innovative solutions that make a real difference.</p>
-                <div class="cta-buttons">
-                    <a href="../contact/index.html" class="btn btn-primary">Start a Conversation</a>
-                    <a href="../now/index.html" class="btn btn-secondary">See What I'm Working On</a>
+            <div class="card" style="max-width: 620px; margin: 0 auto; align-items: center; text-align: center;">
+                <h3>Let's work together</h3>
+                <p>Interested in collaborating or have an idea you'd like to discuss? I'm always excited to work on projects that make a real difference.</p>
+                <div class="cta-buttons" style="margin-top: 0.5rem;">
+                    <a href="../contact/index.html" class="btn btn-primary">Start a conversation</a>
+                    <a href="../now/index.html" class="btn btn-secondary">What I'm working on</a>
                 </div>
             </div>
         </section>
@@ -207,4 +259,4 @@
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/includes.js"></script>
 </body>
-</html> 
+</html>
