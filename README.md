@@ -18,9 +18,10 @@
 ## Current Projects
 
 - 🗺️ **Map a Route** – Route planning web app for mapping and visualizing custom paths. [Live app](https://lachlanallison.github.io/map-a-route/) · [GitHub](https://github.com/lachlanallison/map-a-route)
+- 🎥 **Video Toolkit** – In-browser video tools (ffmpeg.wasm, WebCodecs): compress, convert, remux, trim, extract audio, thumbnails, and GIFs. Files never leave your machine. [Live app](https://lachlanallison.github.io/video-toolkit/) · [GitHub](https://github.com/lachlanallison/video-toolkit)
 - 🌐 **Chrome Session Viewer** – Web app that processes Chrome session files client-side to extract and display all tabs. Privacy-first, no data leaves your browser. [Live app](https://lachlanallison.github.io/chrome-session-viewer/) · [GitHub](https://github.com/lachlanallison/chrome-session-viewer)
 - 🖼️ **Browser Extensions Icons** – Convert images into icons for browser extensions in the correct sizes. All processing in-browser. [Live app](https://lachlanallison.github.io/browserextensionsicons) · [GitHub](https://github.com/lachlanallison/browserextensionsicons)
-- 📸 **PhotoStats** – Photo statistics and analysis tool for your photography collection. Built with Rust. [Live app](https://lachlanallison.github.io/photostats/) · [GitHub](https://github.com/lachlanallison/photostats)
+- 📸 **PhotoStats** – Small Rust CLI that scans a folder of photos and prints simple collection stats (EXIF: counts, camera models, date ranges, and more). Installers for Windows, macOS, and Linux. [Install](https://lachlanallison.github.io/photostats/) · [GitHub](https://github.com/lachlanallison/photostats)
 - 🎬 **[NoSpoilerYouTube](https://addons.mozilla.org/en-US/firefox/addon/nospoileryoutube/)** – Firefox extension to hide video length and progress bar on YouTube (great for watching competitive matches spoiler-free).
 - ⏱️ **[Remove YouTube Recommended Videos](https://addons.mozilla.org/en-US/firefox/addon/remove-yt-recommended-videos/)** – Firefox extension to stop recommended videos from eating your time.
 
