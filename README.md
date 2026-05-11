@@ -3,6 +3,8 @@
 📍 **Australia** | 💻 **Developer** | 📊 **Data Analyst** | 🔧 **Problem solver with data and software**
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white)
 ![Rust](https://img.shields.io/badge/-Rust-000000?style=flat-square&logo=rust&logoColor=white)
 ![SQL](https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![HTML](https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
@@ -17,10 +19,12 @@
 
 ## Current Projects
 
+- 🔄 **KeepSync** – Self-hosted browser tab and bookmark sync across Chrome and Firefox. Privacy-focused, real-time sync, no third party required. [Live app](https://lachlanallison.github.io/keepsync/) · [GitHub](https://github.com/lachlanallison/keepsync)
+- 🖥️ **Screen Recall** – Private, local-first screen recall desktop app. Capture, OCR, search, and chat with your screen history. Nothing leaves your machine. [GitHub](https://github.com/lachlanallison/screen-recall)
 - 🗺️ **Map a Route** – Route planning web app for mapping and visualizing custom paths. [Live app](https://lachlanallison.github.io/map-a-route/) · [GitHub](https://github.com/lachlanallison/map-a-route)
 - 🎥 **Video Toolkit** – In-browser video tools (ffmpeg.wasm, WebCodecs): compress, convert, remux, trim, extract audio, thumbnails, and GIFs. Files never leave your machine. [Live app](https://lachlanallison.github.io/video-toolkit/) · [GitHub](https://github.com/lachlanallison/video-toolkit)
 - 🌐 **Chrome Session Viewer** – Web app that processes Chrome session files client-side to extract and display all tabs. Privacy-first, no data leaves your browser. [Live app](https://lachlanallison.github.io/chrome-session-viewer/) · [GitHub](https://github.com/lachlanallison/chrome-session-viewer)
-- 🖼️ **Browser Extensions Icons** – Convert images into icons for browser extensions in the correct sizes. All processing in-browser. [Live app](https://lachlanallison.github.io/browserextensionsicons) · [GitHub](https://github.com/lachlanallison/browserextensionsicons)
+- 🖼️ **Browser Extension Icons** – Convert images into icons for browser extensions in the correct sizes. All processing in-browser. [Live app](https://lachlanallison.github.io/browserextensionsicons) · [GitHub](https://github.com/lachlanallison/browserextensionsicons)
 - 📸 **PhotoStats** – Small Rust CLI that scans a folder of photos and prints simple collection stats (EXIF: counts, camera models, date ranges, and more). Installers for Windows, macOS, and Linux. [Install](https://lachlanallison.github.io/photostats/) · [GitHub](https://github.com/lachlanallison/photostats)
 - 🎬 **[NoSpoilerYouTube](https://addons.mozilla.org/en-US/firefox/addon/nospoileryoutube/)** – Firefox extension to hide video length and progress bar on YouTube (great for watching competitive matches spoiler-free).
 - ⏱️ **[Remove YouTube Recommended Videos](https://addons.mozilla.org/en-US/firefox/addon/remove-yt-recommended-videos/)** – Firefox extension to stop recommended videos from eating your time.
