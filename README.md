@@ -19,6 +19,7 @@
 
 ## Current Projects
 
+- 📋 **Local HTML Tools** – A curated directory of browser-first, offline-friendly HTML utilities. Searchable, filterable, and open source. [Live site](https://localhtmltools.lachlanallison.com/) · [GitHub](https://github.com/lachlanallison/local-html-tools)
 - 🔄 **KeepSync** – Self-hosted browser tab and bookmark sync across Chrome and Firefox. Privacy-focused, real-time sync, no third party required. [Live app](https://lachlanallison.github.io/keepsync/) · [GitHub](https://github.com/lachlanallison/keepsync)
 - 🖥️ **Screen Recall** – Private, local-first screen recall desktop app. Capture, OCR, search, and chat with your screen history. Nothing leaves your machine. [GitHub](https://github.com/lachlanallison/screen-recall)
 - 🗺️ **Map a Route** – Route planning web app for mapping and visualizing custom paths. [Live app](https://lachlanallison.github.io/map-a-route/) · [GitHub](https://github.com/lachlanallison/map-a-route)
