@@ -1,0 +1,51 @@
+# Lachlan Allison
+# https://lachlanallison.com
+
+> Personal site of Lachlan Allison — developer building browser-first web apps, data tools, and privacy-focused utilities. Based in Australia. Available for new projects.
+
+## Main pages
+- /
+- /projects/
+- /blogs/
+- /photos/
+- /now/
+- /contact/
+
+## Blog posts
+- /blogs/commento-disqus-alternative.html
+- /blogs/good-burgers-seoul.html
+- /blogs/bing-ads-professional-accreditation.html
+
+## Projects
+Full portfolio at /projects/ — 15 shipped projects.
+
+### Web apps & tools
+- Australian Tax Estimate — individual income tax estimate using ATO rates (salary, rental, deductions, PAYG): https://lachlanallison.github.io/tax-estimate-calculator/
+- Local HTML Tools — curated directory of browser-first HTML utilities: https://localhtmltools.lachlanallison.com/
+- KeepSync — self-hosted tab and bookmark sync: https://lachlanallison.github.io/keepsync/
+- Map a Route — route planner for runners and cyclists: https://lachlanallison.github.io/map-a-route/
+- Video Toolkit — in-browser video processing (ffmpeg.wasm, WebCodecs): https://lachlanallison.github.io/video-toolkit/
+- Chrome Session Viewer — parse Chrome session files client-side: https://lachlanallison.github.io/chrome-session-viewer/
+- Browser Extension Icons — SVG to extension icon PNGs: https://lachlanallison.github.io/browserextensionsicons/
+- PhotoStats — Rust CLI for photo collection EXIF stats: https://lachlanallison.github.io/photostats/
+
+### Desktop
+- Screen Recall — local-first screen capture, OCR, and search: https://github.com/lachlanallison/screen-recall
+
+### Browser extensions
+- NoSpoilerYouTube — hide YouTube duration and progress bar: https://addons.mozilla.org/en-US/firefox/addon/nospoileryoutube/
+- Remove YouTube Recommended Videos — hide YouTube recommendations: https://addons.mozilla.org/en-US/firefox/addon/remove-yt-recommended-videos/
+
+### WordPress plugins
+- Comment Out — hidden text via shortcodes with site-wide tracking: https://wordpress.org/plugins/comment-out/
+- Image Manipulation for Amazon SiteStripe — image tweaks for Amazon Associates: https://wordpress.org/plugins/manipulation-for-amazon-sitestripe-image/
+
+### Scripts & utilities
+- WP GDrive Backup — WordPress site and database backups to Google Drive: https://github.com/lachlanallison/wp-gdrive-backup
+- Windows Helper Scripts — Windows automation utilities: https://github.com/lachlanallison/windows-helper-scripts
+
+## Contact
+- mailto:hello@lachlanallison.com
+- https://github.com/lachlanallison
+- https://linkedin.com/in/lachlanallison
+- https://twitter.com/lachlanallison
